@@ -1,0 +1,8 @@
+Para criar o package.json, basta rodar o comando "npm init -y" no terminal
+
+para rodar a aplicação com um comando npm, basta apenas adicionar um script no package.json, passando o comando e o caminho do arquivo executável. Ex:
+"start": "node src/server.js". Aqui, ao rodar "npm start" o node irá executar o arquivo server.js
+
+É comum termos um script de desenvolvimento, para que sempre que atualizarmos os arquivos, o script seja executado automaticamente. Ex: no package.json, podemos incluir um novo script com a flag "watch", para realizar essa tarefa. Ex: "dev": "node --watch src/server.js" ("dev" pode ser também um nome qualquer). E para executarmos esse watch, basta rodarmos o comando: "npm run dev"
+
+Dica: Para obter ícones legais, buscar no google fonts por mateial symbols and icons: https://fonts.google.com/icons

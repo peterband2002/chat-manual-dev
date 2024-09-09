@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+:root{ /* Essa pseudoclasse é basicamente a tag <html> */
+    font-size: 16px;
+}
+
+body {
+    background: url("../images/background.png");
+    color: #f2f2f2;
+}
+
+.container {
+    width: 100%;
+    height: 100dvh; /* dvh(dynamic viewport height), ajusta dinamicamente a altura do site, para que navegadores que tenham alguma barra inferior ou superior, não cubram alguma parte do site*/
+    /* A partir daqui estou centralizando tudo */
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    width: 100%;
+    max-width: 330px;
+    background-color: #212121;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.login > h2 { /* O sinal de maior que significa que o h2 seja estritamente filho de ".login" */
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column; /* Aqui eu disponho os elementos do formulário em coluna, deixando um elemento abaixo do outro */
+    gap: 15px; /* Aqui eu dou um espaçamento entre esses elementos */
+}
+
+.login__input {
+    border: none;
+    padding: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: #121212;
+    color: #f2f2f2;
+    outline: none; /* Isso remove a borda que reveste a caixa de texto */
+    border-radius: 5px;
+}
+
+.login__input:focus {
+    outline: 2px solid #f2f2f2; /* Aqui estou aplicando a borda que reveste a caixa de texto, apenas para quando o input estiver selecionado. Fazendo isso eu deixo essa opção padronizada para qualquer navegador que estou utilizando */
+}
+
+.login__button {
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background-color: #ddd;
+    cursor: pointer;
+    color: #121212;
+}
+
+.login__button:hover {
+    background-color: #fff;
+}
+
+.chat {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between; /* Cria um espaço proporcional entre os elementos contidos */
+}
+
+.chat__messages {
+    flex-grow: 1; /* Isso permite que a área ocupe todo o espaço disponível */
+    padding: 30px 30px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chat__form {
+    background-color: #191919;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed; /* Aqui estou fixando o elemento para evitar que o mesmo role junto com as mensagens */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.chat__input {
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    background-color: #212121;
+    outline: none;
+    color: #f2f2f2;
+    font-size: 1rem;
+}
+
+.chat__button {
+    border: none;
+    background: none;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+
+.chat__button > span {
+    font-size: 1.8rem;
+}
+
+.chat__messages > div {
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+
+.message--self {
+    background-color: #f2f2f2;
+    color: #121212;
+    border-radius: 10px 10px 0px 10px;
+    align-self: flex-end;
+}
+
+.message--other {
+    background-color: #333;
+    color: #f2f2f2;
+    border-radius: 0px 10px 10px 10px;
+    align-self: flex-start;
+}
+
+.message--sender {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: cadetblue;
+}
